@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0;
+    }
+    label {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    input {
+      padding: 10px;
+      width: 250px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+     button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: #0077ff;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #005ecc;
+    }
+    #main {
+      margin-top: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      min-width: 280px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+     #main p {
+      margin: 8px 0;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+    <label for="city">Weather Report</label><br><br>
+    <input type="text" name="city" id="city"><br>
+    <button onclick="getWeather()">Get Data</button>
+    <div id="main"></div>
+    <script src="./index.js"></script>
+</body>
+</html>
